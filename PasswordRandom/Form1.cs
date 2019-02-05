@@ -11,7 +11,6 @@ namespace PasswordRandom
         }
 
         Random random = new Random();
-        int variant = 0;
 
         private void passLenghtTrackBar_Scroll(object sender, EventArgs e)
         {
@@ -29,17 +28,12 @@ namespace PasswordRandom
 
         private char PlaceSymbol()
         {
-            char curSym;
-            curSym = (char)randomNumberGen();
-            return curSym;
+            return (char)randomNumberGen();
         }
 
         private int randomNumberGen()
         {
-            int randomNumber = 0;
-
-            randomNumber = random.Next(33, 126);
-            return randomNumber;
+            return random.Next(33, 126);
         }
     }
 }
